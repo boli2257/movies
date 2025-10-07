@@ -1,7 +1,8 @@
 import { Box, Container, Typography } from '@mui/material'
 import React from 'react'
+import { MyPagination } from './MyPagination'
 
-export const PageLayout = ({ title, children }) => {
+export const PageLayout = ({ title, children, page, setPage }) => {
     return (
         <Container maxWidth={false} sx={{
             background: "linear-gradient(to top, #941B0C, #4E0110)",
@@ -12,6 +13,9 @@ export const PageLayout = ({ title, children }) => {
             </Typography>
             <Box>
                 {children}
+            </Box>
+            <Box display="flex" justifyContent="center" sx={{paddingBottom:""}}>
+            <MyPagination page={page} setPage={setPage}/>
             </Box>
         </Container>
     )
