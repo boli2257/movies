@@ -6,18 +6,19 @@
 .css-36lq8r-MuiButtonBase-root-MuiBottomNavigationAction-root.Mui-selected {
     color: #f08886 !important;
 }
-.rateing{
-    width: 30px;
-    height: 30px;
+.rating{
+    position: absolute;
+    top: 45%;
+    right:5%;
+    border: 1px solid black;
+    color: white;
+    background-color:#8b021d;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    margin-left: 290px;
-    top: auto;
-    border: 2px solid black;
-    border-radius: 50%;
-    padding: 3px;
 }
 .MuiPaginationItem-root.Mui-selected{
        color: white !important;
