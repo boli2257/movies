@@ -1,13 +1,26 @@
 import axios from "axios";
 
 const base_url = 'https://api.themoviedb.org/3/discover/'/*movie?api_key='+import.meta.env.VITE_TMDB_API_KEY*/
+const urlGenres=`https://api.themoviedb.org/3/genre/`/*${type}/list?api_key=${import.meta.env.VITE_API_KEY}*/
 
 export const getData = async ({queryKey})=>{
     console.log(queryKey);
+    let url = base_url+queryKey[1]+'?api_key='+import.meta.env.VITE_TMDB_API_KEY+'&page='+queryKey[2]
+    if (queryKey[3].length!=0) {
+      url += '&with_genres='+ queryKey[3].join(',')
+    }
+    const resp = await axios.get(url)
+    console.log(url);
     
-
-    const resp = await axios.get(base_url+queryKey[1]+'?api_key='+import.meta.env.VITE_TMDB_API_KEY+'&page='+queryKey[2])
     return resp.data
+}
+export const getGenres = async ({queryKey})=>{
+    console.log(queryKey);
+    
+    const url = urlGenres+queryKey[1]+'/list?api_key='+import.meta.env.VITE_TMDB_API_KEY
+    const resp = await axios.get(url)
+    return resp.data
+
 }
 
 

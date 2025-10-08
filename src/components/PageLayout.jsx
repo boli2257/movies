@@ -1,8 +1,9 @@
 import { Box, Container, Typography } from '@mui/material'
 import React from 'react'
 import { MyPagination } from './MyPagination'
+import { Genres } from './Genres'
 
-export const PageLayout = ({ title, children, page, setPage }) => {
+export const PageLayout = ({ title, children, page, setPage, type, selectedGenres, setSelectedGenres}) => {
     return (
         <Container maxWidth={false} sx={{
             background: "linear-gradient(to top, #941B0C, #4E0110)",
@@ -11,6 +12,7 @@ export const PageLayout = ({ title, children, page, setPage }) => {
             <Typography variant='h3' sx={{ textTransform: "uppercase", fontWeight: "bold", letterSpacing: 2, textAlign: "center",background:"linear-gradient(to right, #330600ff, #ff0336ff)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent"}}>
                 {title}
             </Typography>
+            <Genres type={type} selectedGenres={selectedGenres} setSelectedGenres={setSelectedGenres}/>
             <Box>
                 {children}
             </Box>
