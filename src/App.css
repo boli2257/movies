@@ -28,7 +28,10 @@
     
 }
 .MuiPaginationItem-root.Mui-selected{
-       color: white !important;
+       color: #f08886 !important;
+}
+.css-1l5xwdx-MuiButtonBase-root-MuiPaginationItem-root{
+  color: whitesmoke !important;
 }
 .holographic-container {
   display: flex;
@@ -62,8 +65,8 @@
   position: absolute;
   top: -50%;
   left: -50%;
-  width: 200%;
-  height: 200%;
+  width: 400%;
+  height: 300%;
   background: linear-gradient(
     0deg, 
     transparent, 
@@ -82,4 +85,40 @@
 .holographic-card:hover::before {
   opacity: 1;
   transform: rotate(-45deg) translateY(100%);
+}
+.css-hzcega-MuiTabs-list {
+    display: flex;
+    justify-content: center;
+}
+.css-fd3nu-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    color: #f08886 !important;
+
+  }
+  .css-fd3nu-MuiButtonBase-root-MuiTab-root{
+    color: whitesmoke !important;
+  }
+  .css-9j73qj-MuiInputBase-input-MuiInput-input {
+    color: whitesmoke !important;
+  }
+  .css-1qltlow-MuiTabs-indicator {
+    background-color: #f08886 !important;
+  }
+.css-1uent87-MuiButtonBase-root-MuiButton-root {
+  color: #f08886 !important;
+}
+.css-ed63ti-MuiInputBase-root-MuiInput-root::after{
+  background-color: #fff;
+}
+.css-2hy7sk-MuiFormLabel-root-MuiInputLabel-root{
+  color: whitesmoke !important;
+}
+.css-1ew92b2-MuiFormLabel-root-MuiInputLabel-root{
+  
+    color: #f08886 !important;
+}
+.css-ed63ti-MuiInputBase-root-MuiInput-root::after {
+  border-bottom: 1px solid   #f08886 !important;
+}
+.css-ed63ti-MuiInputBase-root-MuiInput-root::before{
+  border-bottom: 1px solid #fcfcfc !important;
 }

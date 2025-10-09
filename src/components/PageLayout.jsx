@@ -12,7 +12,7 @@ export const PageLayout = ({ title, children, page, setPage, type, selectedGenre
             <Typography variant='h3' sx={{ textTransform: "uppercase", fontWeight: "bold", letterSpacing: 2, textAlign: "center",background:"linear-gradient(to right, #330600ff, #ff0336ff)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent"}}>
                 {title}
             </Typography>
-            <Genres type={type} selectedGenres={selectedGenres} setSelectedGenres={setSelectedGenres}/>
+           { title!= "Search page" && <Genres type={type} selectedGenres={selectedGenres} setSelectedGenres={setSelectedGenres}/>}
             <Box>
                 {children}
             </Box>

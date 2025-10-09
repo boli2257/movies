@@ -21,12 +21,15 @@ export const SingleChip=({id,name, selectedGenres, setSelectedGenres})=> {
   };
 
   return (
-    <Stack direction="row" spacing={1}>
+    <Stack direction="row" spacing={1} sx={{padding:"5px", display:"flex", flexWrap:"wrap"}}>
       <Chip
       className='radiogombok'
         label={name}
         onClick={handleClick}
         icon={isSelected? <MdOutlineRadioButtonChecked /> :<MdOutlineRadioButtonUnchecked />}
+        clickable
+        color='warning'
+        sx={{color:"whitesmoke", bgcolor:"#b419198c"}}
         />
     </Stack>
   );
