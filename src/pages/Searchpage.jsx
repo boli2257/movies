@@ -36,10 +36,12 @@ export const Searchpage = () => {
         <Button onClick={()=>setTxt(inputref.current.value)}><IoIosSearch size={"2rem"}/></Button>
         
         </Box>
-        <Tabs value={value} onChange={handleChange}>
+        <Box sx={{display:"flex", flexDirection:"row", justifyContent:"center", alignItems:"center"}}>
+        <Tabs value={value} onChange={handleChange} >
           <Tab label="Movies"  sx={{display:"flex", justifyContent:"center", alignItems:"center"}}/>
           <Tab label="Tv Series"  sx={{display:"flex", justifyContent:"center", alignItems:"center"}}/>
         </Tabs>
+        </Box>
           <Grid sx={{display:"flex", flexDirection:"row", flexWrap:"wrap", gap:"20px"}}>
                   {isLoading && <CircularProgress sx={{fontSize:"20rem", color:"#f08886"}}/>}
             {data && data.results.map(obj =>

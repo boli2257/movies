@@ -86,10 +86,6 @@
   opacity: 1;
   transform: rotate(-45deg) translateY(100%);
 }
-.css-hzcega-MuiTabs-list {
-    display: flex;
-    justify-content: center;
-}
 .css-fd3nu-MuiButtonBase-root-MuiTab-root.Mui-selected {
     color: #f08886 !important;
 
