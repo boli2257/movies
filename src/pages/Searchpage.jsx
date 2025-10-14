@@ -29,15 +29,16 @@ export const Searchpage = () => {
       
       <Box sx={{display:"flex", flexDirection:"row", justifyContent:"center", alignItems:"center"}}>
           <TextField
+          className='label-keres'
           id="standard-textarea" label="Keresés"
            multiline variant="standard"
           inputRef={inputref}
         />
-        <Button onClick={()=>setTxt(inputref.current.value)}><IoIosSearch size={"2rem"}/></Button>
+        <Button className='kereses' onClick={()=>setTxt(inputref.current.value)}><IoIosSearch size={"2rem"}/></Button>
         
         </Box>
         <Box sx={{display:"flex", flexDirection:"row", justifyContent:"center", alignItems:"center"}}>
-        <Tabs value={value} onChange={handleChange} >
+        <Tabs className='asd'value={value} onChange={handleChange} >
           <Tab label="Movies"  sx={{display:"flex", justifyContent:"center", alignItems:"center"}}/>
           <Tab label="Tv Series"  sx={{display:"flex", justifyContent:"center", alignItems:"center"}}/>
         </Tabs>
