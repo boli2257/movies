@@ -17,7 +17,7 @@ export const Movies = () => {
       <Grid container spacing={2} justifyContent='center'>
         {isLoading && <CircularProgress sx={{fontSize:"20rem", color:"#f08886"}}/>}
         {data && data.results.map(obj =>
-            <MyCard key={obj.id} {...obj}/>
+            <MyCard key={obj.id} {...obj} type='movie'/>
         )}
       </Grid>
     </PageLayout>

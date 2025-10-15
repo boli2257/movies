@@ -90,3 +90,28 @@
 .asd-selected{
   color: #f08886;
 }
+button.slick-arrow{
+  background-color: #8b021d !important;
+  border-radius: 50%;
+}
+.img-carousel{
+  max-height: 120px;
+  border-radius: 10px;
+}
+.maga_a_modal{
+  width: 500px;
+}
+.modal_cim{
+
+}
+.tagline{
+  display: flex;
+  justify-content: center;
+}
+.modal_ev{
+
+}
+#modal-modal-title{
+  display: flex;
+  flex-wrap: wrap;
+}

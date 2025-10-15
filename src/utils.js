@@ -36,3 +36,8 @@ export const getSearch = async ({queryKey})=>{
 export const img_300='https://image.tmdb.org/t/p/w300';
 export const img_500='https://image.tmdb.org/t/p/w500'; 
 export const img_none = 'https://www.movienewz.com/img/films/poster-holder.jpg'
+export const detailsData = async({queryKey})=>{
+    console.log(queryKey[1]);
+        const response = await axios.get(queryKey[1])
+        return response.data
+}

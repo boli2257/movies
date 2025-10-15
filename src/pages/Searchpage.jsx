@@ -46,7 +46,7 @@ export const Searchpage = () => {
           <Grid sx={{display:"flex", flexDirection:"row", flexWrap:"wrap", gap:"20px"}}>
                   {isLoading && <CircularProgress sx={{fontSize:"20rem", color:"#f08886"}}/>}
             {data && data.results.map(obj =>
-                                <MyCard key={obj.id} original_title={obj.name} release_date={obj.first_air_date} {...obj}/>
+                                <MyCard key={obj.id} original_title={obj.name} release_date={obj.first_air_date} {...obj} type={value==0?'movie':'tv'}/>
                             )}
           </Grid>
         </PageLayout>

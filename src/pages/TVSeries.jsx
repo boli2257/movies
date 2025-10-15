@@ -16,7 +16,7 @@ export const TVSeries = () => {
       <Grid sx={{display:"flex", flexDirection:"row", flexWrap:"wrap", gap:"20px"}}>
         {isLoading && <CircularProgress sx={{fontSize:"20rem", color:"#f08886"}}/>}
                 {data && data.results.map(obj =>
-                    <MyCard key={obj.id} original_title={obj.name} title={obj.name} release_date={obj.first_air_date} {...obj}/>
+                    <MyCard key={obj.id} original_title={obj.name} title={obj.name} release_date={obj.first_air_date} {...obj} type='tv'/>
                 )}
       </Grid>
     </PageLayout>
