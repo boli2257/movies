@@ -25,9 +25,9 @@ const handleChange=(event, newValue)=>{
         
         
         
-        <BottomNavigationAction label="Movies" icon={<BiCameraMovie />} sx={{ color:"whitesmoke"}}/>
-        <BottomNavigationAction label="TVSeries" icon={<FiTv />} sx={{ color:"whitesmoke"}}/>
-        <BottomNavigationAction label="Search" icon={<MdSearch />} sx={{ color:"whitesmoke"}}/>
+        <BottomNavigationAction label="Movies" icon={<BiCameraMovie />} sx={{ color:"whitesmoke", flex:1, width:'100%'}}/>
+        <BottomNavigationAction label="TVSeries" icon={<FiTv />} sx={{ color:"whitesmoke", flex:1}}/>
+        <BottomNavigationAction label="Search" icon={<MdSearch />} sx={{ color:"whitesmoke", flex:1}}/>
       </BottomNavigation>
     </Box>
   );

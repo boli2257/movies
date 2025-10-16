@@ -111,12 +111,10 @@ button.slick-arrow{
     max-width: 300px;
 }
 .MuiBottomNavigation-root{
-  display: flex;
-  justify-content: center;
-  align-items: center;  
-}
-.MuiBox-root{
-  max-width: 320px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important; 
+  width: 100% !important; 
 }
 .img-carousel{
  max-height: 65px;
