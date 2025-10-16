@@ -3,11 +3,11 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import { useQueries, useQuery } from 'react-query';
+import { useQuery } from 'react-query';
 import { detailsData } from '../utils';
-import { CardMedia } from '@mui/material';
+import { CardMedia, CircularProgress, colors } from '@mui/material';
 import { MyCarousel } from './MyCarousel';
-import { img_500, img_300, img_none } from '../utils'
+import { img_500 } from '../utils'
 import { ShowTrailer } from './ShowTrailer';
 
 const style = {
@@ -15,10 +15,11 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  maxWidth: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
+  border:"none",
+  maxWidth: 500,
+  bgcolor: '#8b021d',
+  color:"#fff",
+  opacity:1,
   p: 4,
 };
 
@@ -33,14 +34,15 @@ export const MyModal = ({ open, setOpen, id, type, }) => {
 
   data && console.log(data);
   if (isLoading) {
-    return <h1>Loading...</h1>
+    return <CircularProgress sx={{ fontSize: "20rem", color: "#f08886" }} />
   }
   if (isError) {
     return <h1>{error}</h1>
   }
   return (
-    <div>
+    <div className='MyModal'>
       <Modal
+      sx={{maxWidth:500}}
         className='maga_a_modal'
         open={open}
         onClose={handleClose}
@@ -64,11 +66,17 @@ export const MyModal = ({ open, setOpen, id, type, }) => {
           <Typography className='tagline'>
             {data && data?.tagline}
           </Typography>
-            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-              {data && data?.overview}
-            </Typography>
-            <MyCarousel  type={type} id={id} />
-            <ShowTrailer ctype={type} id={id} />
+          <Typography id="modal-modal-description" sx={{ mt: 2, overflow:"auto", maxHeight:150}}>
+            {data && data?.overview}
+          </Typography>
+          <Box sx={{}}>
+            <Box sx={{padding:4}} >
+              <MyCarousel type={type} id={id} />
+            </Box>
+            <Box sx={{display:"flex", justifyContent:"center"}}>
+              <ShowTrailer type={type} id={id} />
+            </Box>
+          </Box>
         </Box>
       </Modal>
     </div>

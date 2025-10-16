@@ -16,9 +16,9 @@ const {data, isLoading, isError, error} = useQuery({queryKey:['details',urlCredi
   return (
     <Slider {...settings}>
         {data && data.cast.map(obj=>
-      <div key={obj.id}>
+      <div className="actors" key={obj.id} >
         <img className="img-carousel" src={obj.profile_path? img_300+obj.profile_path : img_none} alt="" />
-        <b>{obj.name}</b>
+        <b className="nev">{obj.name}</b>
       </div>
       )}
     </Slider>

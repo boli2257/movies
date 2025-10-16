@@ -98,20 +98,35 @@ button.slick-arrow{
   max-height: 120px;
   border-radius: 10px;
 }
-.maga_a_modal{
-  width: 500px;
-}
-.modal_cim{
-
-}
 .tagline{
   display: flex;
   justify-content: center;
-}
-.modal_ev{
-
 }
 #modal-modal-title{
   display: flex;
   flex-wrap: wrap;
 }
+@media only screen and (max-width: 500px) {
+  .kartya{
+    max-width: 300px;
+}
+.MuiBottomNavigation-root{
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+.MuiBox-root{
+  max-width: 320px !important;
+}
+.img-carousel{
+ max-height: 65px;
+}
+.nev{
+   font-size: 0.6em;
+}
+}
+.gomb{
+  background-color:  #fff !important;
+  color: #b80328 !important;
+}
+

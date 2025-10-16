@@ -10,13 +10,15 @@ export const ShowTrailer=({type, id})=> {
      const urlVideos=`https://api.themoviedb.org/3/${type}/${id}/videos?api_key=${import.meta.env.VITE_TMDB_API_KEY}`;
 const {data, isLoading, isError, error} = useQuery({queryKey:['details',urlVideos],queryFn:detailsData})
   return (
-    <Button
+    <Button className='gomb'
       variant="contained"
       href={data &&data?.results && data.results.length > 0 ? `https://www.youtube.com/watch?v=${data?.results[0].key}` : img_none}
       target='_blank'
       startIcon={<FaYoutube />}
     >
+      <b>
       Watch the trailer!
+      </b>
     </Button>
   );
 }

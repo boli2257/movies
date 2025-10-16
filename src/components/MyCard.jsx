@@ -9,7 +9,7 @@ export const MyCard = ({poster_path,original_title
   return (
     <div >
       
-    <Card onClick={()=>setOpen(true)} className='holographic-card' sx={{ height:630, width: 345, position:"relative", objectFit:"cover", aspectRatio:"1.1", gap:"30px"}}>
+    <Card onClick={()=>setOpen(true)} className='holographic-card kartya' sx={{ height:630, width: 345, position:"relative", objectFit:"cover", aspectRatio:"1.1", gap:"30px"}}>
       <CardMedia
         sx={{ height: 500 }}
         image={img_500+poster_path}
